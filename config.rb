@@ -10,5 +10,12 @@ configure :build do
 		html.remove_https_protocol      = false
 	end
 	activate :minify_css
-  activate :asset_hash
+  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif', '.json', '.js']
+end
+
+helpers do
+  def cacheversion
+		Time.now
+		return Time.now.to_i
+  end
 end

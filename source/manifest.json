@@ -1,0 +1,15 @@
+{
+  "short_name": "Petr Kletečka",
+  "name": "Petr Kletečka",
+	"start_url": "/",
+  "icons": [
+    {
+      "src": "/img/pek.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+
+  ],
+ "display": "standalone",
+ "orientation": "portrait"
+}
