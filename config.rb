@@ -1,5 +1,3 @@
-Time.zone = "Europe/Prague"
-
 set :css_dir, "css"
 set :images_dir, "img"
 
