@@ -2,7 +2,7 @@ help:
 	@echo "help     - tato nápověda"
 	@echo "web      - vygeneruje web"
 	@echo "server   - spustí náhled webu"
-	@echo "clean    - smaže generované ikonky"
+	@echo "install  - instalace"
 
 web:
 	bundle exec middleman build --clean
