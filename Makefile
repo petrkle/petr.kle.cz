@@ -1,14 +1,14 @@
 help:
 	@echo "help     - tato nápověda"
 	@echo "web      - vygeneruje web"
-	@echo "server   - spustí náhled webu"
 	@echo "install  - instalace"
+	@echo "clean    - smaže generované ikonky"
 
 web:
-	bundle exec middleman build --clean
-
-server:
-	bundle exec middleman server
+	NO_CONTRACTS=true bundle exec middleman build --clean
 
 install:
 	bundle install
+
+clean:
+	rm -rf build

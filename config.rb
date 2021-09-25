@@ -1,19 +1,12 @@
 set :css_dir, "css"
 set :images_dir, "img"
+set :markdown_engine, :kramdown
+set :markdown, :transliterated_header_ids => true
 
-# Build-specific configuration
 configure :build do
-	activate :minify_html do |html|
-		html.remove_http_protocol       = false
-		html.remove_https_protocol      = false
-	end
+	activate :minify_html
 	activate :minify_css
+  activate :gzip
+  activate :brotli
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif', '.json', '.js']
-end
-
-helpers do
-  def cacheversion
-		Time.now
-		return Time.now.to_i
-  end
 end
